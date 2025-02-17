@@ -1,5 +1,6 @@
 import Ads from "../src/components/Ads";
 import CardCar from "./components/CardCar";
+import SortCard from "./components/SortCard";
 
 import Koenisegg from "../src/assets/images/koenisegg.png";
 import NissanGTR from "../src/assets/images/nissan-gtr.png";
@@ -39,6 +40,7 @@ function App() {
             price={"100.00"}
           />
         </div>
+        <SortCard />
       </div>
     </div>
   );
