@@ -17,7 +17,8 @@ function Ads() {
             }
             p="Ease of doing a car rental safely and reliably. Of course at a low
               price."
-            bg={bg}>
+            bg={bg}
+            bgButton={"bg-blue-700"}>
             asdas
           </CardAds>
         </div>
@@ -33,7 +34,8 @@ function Ads() {
             }
             p="Ease of doing a car rental safely and reliably. Of course at a low
               price."
-            bg={bg2}>
+            bg={bg2}
+            bgButton={"bg-blue-500"}>
             asdas
           </CardAds>
         </div>
