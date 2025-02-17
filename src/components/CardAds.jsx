@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function CardAds({ title, p, bg, bgButton }) {
   return (
     <div className="w-full border h-[300px] md:h-[360px] border-gray-200 rounded-lg shadow relative overflow-hidden">
@@ -7,7 +8,7 @@ function CardAds({ title, p, bg, bgButton }) {
         <p className="mt-2 md:mt-4 text-sm md:text-base">{p}</p>
         <button
           type="button"
-          className="px-4 py-2 md:px-5 md:py-3 mt-3 md:mt-5 bg-blue-600 rounded-md text-sm md:text-base">
+          className={`px-4 py-2 md:px-5 md:py-3 mt-3 md:mt-5 rounded-md text-sm md:text-base ${bgButton}`}>
           Rental Car
         </button>
       </div>

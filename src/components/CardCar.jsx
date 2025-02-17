@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Button from "./Button";
 
 import Like from "../assets/icon/Like.png";
