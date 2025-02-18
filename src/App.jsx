@@ -11,6 +11,13 @@ function App() {
     <div className="bg-slate-100">
       <div className="mx-4 md:mx-8 lg:mx-16 ">
         <Ads />
+        <SortCard />
+        <div className="justify-between flex mt-9">
+          <div className="text-slate-600 font-semibold">Popular Car</div>
+          <div className="text-blue-500">
+            <a href="">View All</a>
+          </div>
+        </div>
         <div className="flex gap-8">
           <CardCar
             title={"Koenisegg"}
@@ -40,7 +47,6 @@ function App() {
             price={"100.00"}
           />
         </div>
-        <SortCard />
       </div>
     </div>
   );
