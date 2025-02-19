@@ -2,10 +2,19 @@ import { useState } from "react";
 import Swap from "../assets/icon/Swap.svg";
 
 function SortCard() {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdownPickUp, setOpenDropdownPickUp] = useState(null);
+  const [openDropdownDropdown, setOpenDropdownDropdown] = useState(null);
 
-  const handleDropdownToggle = (dropdownName) => {
-    setOpenDropdown(openDropdown === dropdownName ? null : dropdownName);
+  const handleDropdownTogglePickUp = (dropdownName) => {
+    setOpenDropdownPickUp(
+      openDropdownPickUp === dropdownName ? null : dropdownName
+    );
+  };
+
+  const handleDropdownToggleDropOff = (dropdownName) => {
+    setOpenDropdownDropdown(
+      openDropdownDropdown === dropdownName ? null : dropdownName
+    );
   };
 
   return (
@@ -23,14 +32,14 @@ function SortCard() {
                 <div className="relative inline-flex">
                   <button
                     type="button"
-                    onClick={() => handleDropdownToggle("location")}
+                    onClick={() => handleDropdownTogglePickUp("location")}
                     className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
                     aria-haspopup="true"
-                    aria-expanded={openDropdown === "location"}>
+                    aria-expanded={openDropdownPickUp === "location"}>
                     Select your city
                     <svg
                       className={`size-4 text-gray-600 transition-transform ${
-                        openDropdown === "location" ? "rotate-180" : ""
+                        openDropdownPickUp === "location" ? "rotate-180" : ""
                       }`}
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -45,7 +54,7 @@ function SortCard() {
                     </svg>
                   </button>
 
-                  {openDropdown === "location" && (
+                  {openDropdownPickUp === "location" && (
                     <div
                       className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
@@ -79,14 +88,14 @@ function SortCard() {
                 <div className="relative inline-flex">
                   <button
                     type="button"
-                    onClick={() => handleDropdownToggle("date")}
+                    onClick={() => handleDropdownTogglePickUp("date")}
                     className="mt-2 inline-flex items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
                     aria-haspopup="true"
-                    aria-expanded={openDropdown === "date"}>
+                    aria-expanded={openDropdownPickUp === "date"}>
                     Select your date
                     <svg
                       className={`size-4 text-gray-600 transition-transform ${
-                        openDropdown === "date" ? "rotate-180" : ""
+                        openDropdownPickUp === "date" ? "rotate-180" : ""
                       }`}
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -101,7 +110,7 @@ function SortCard() {
                     </svg>
                   </button>
 
-                  {openDropdown === "date" && (
+                  {openDropdownPickUp === "date" && (
                     <div
                       className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
@@ -135,14 +144,14 @@ function SortCard() {
                 <div className="relative inline-flex">
                   <button
                     type="button"
-                    onClick={() => handleDropdownToggle("time")}
+                    onClick={() => handleDropdownTogglePickUp("time")}
                     className="mt-2 inline-flex items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
                     aria-haspopup="true"
-                    aria-expanded={openDropdown === "time"}>
+                    aria-expanded={openDropdownPickUp === "time"}>
                     Select your time
                     <svg
                       className={`size-4 text-gray-600 transition-transform ${
-                        openDropdown === "time" ? "rotate-180" : ""
+                        openDropdownPickUp === "time" ? "rotate-180" : ""
                       }`}
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -157,7 +166,7 @@ function SortCard() {
                     </svg>
                   </button>
 
-                  {openDropdown === "time" && (
+                  {openDropdownPickUp === "time" && (
                     <div
                       className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
@@ -208,14 +217,14 @@ function SortCard() {
                 <div className="relative inline-flex">
                   <button
                     type="button"
-                    onClick={() => handleDropdownToggle("location")}
+                    onClick={() => handleDropdownToggleDropOff("location")}
                     className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
                     aria-haspopup="true"
-                    aria-expanded={openDropdown === "location"}>
+                    aria-expanded={openDropdownDropdown === "location"}>
                     Select your city
                     <svg
                       className={`size-4 text-gray-600 transition-transform ${
-                        openDropdown === "location" ? "rotate-180" : ""
+                        openDropdownDropdown === "location" ? "rotate-180" : ""
                       }`}
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -230,7 +239,7 @@ function SortCard() {
                     </svg>
                   </button>
 
-                  {openDropdown === "location" && (
+                  {openDropdownDropdown === "location" && (
                     <div
                       className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
@@ -264,14 +273,14 @@ function SortCard() {
                 <div className="relative inline-flex">
                   <button
                     type="button"
-                    onClick={() => handleDropdownToggle("date")}
+                    onClick={() => handleDropdownToggleDropOff("date")}
                     className="mt-2 inline-flex items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
                     aria-haspopup="true"
-                    aria-expanded={openDropdown === "date"}>
+                    aria-expanded={openDropdownDropdown === "date"}>
                     Select your date
                     <svg
                       className={`size-4 text-gray-600 transition-transform ${
-                        openDropdown === "date" ? "rotate-180" : ""
+                        openDropdownDropdown === "date" ? "rotate-180" : ""
                       }`}
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -286,7 +295,7 @@ function SortCard() {
                     </svg>
                   </button>
 
-                  {openDropdown === "date" && (
+                  {openDropdownDropdown === "date" && (
                     <div
                       className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
@@ -320,14 +329,14 @@ function SortCard() {
                 <div className="relative inline-flex">
                   <button
                     type="button"
-                    onClick={() => handleDropdownToggle("time")}
+                    onClick={() => handleDropdownToggleDropOff("time")}
                     className="mt-2 inline-flex items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
                     aria-haspopup="true"
-                    aria-expanded={openDropdown === "time"}>
+                    aria-expanded={openDropdownDropdown === "time"}>
                     Select your time
                     <svg
                       className={`size-4 text-gray-600 transition-transform ${
-                        openDropdown === "time" ? "rotate-180" : ""
+                        openDropdownDropdown === "time" ? "rotate-180" : ""
                       }`}
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -342,7 +351,7 @@ function SortCard() {
                     </svg>
                   </button>
 
-                  {openDropdown === "time" && (
+                  {openDropdownDropdown === "time" && (
                     <div
                       className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
