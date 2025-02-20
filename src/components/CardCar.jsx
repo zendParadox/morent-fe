@@ -17,7 +17,7 @@ function CardCar({
 }) {
   return (
     <>
-      <div className="group w-64 bg-white px-5 py-5 rounded-lg shadow-sm">
+      <div className="group min-w-64 bg-white px-5 py-5 rounded-lg shadow-sm">
         <div className="w-full h-full ">
           <div className="flex justify-between items-center">
             <div className="">

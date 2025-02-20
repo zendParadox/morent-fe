@@ -36,50 +36,72 @@ function Home() {
               <a href="">View All</a>
             </div>
           </div>
-          <div className="gap-10 mt-5 flex-wrap grid grid-cols-4">
-            <CardCar
-              title={"Koenisegg"}
-              category={"Sport"}
-              image={Koenisegg}
-              fuelCap={"90L"}
-              transmission={"Manual"}
-              seat={"2"}
-              price={"99.00"}
-            />
-            <CardCar
-              title={"Nissan GT-R"}
-              category={"Sport"}
-              image={NissanGTR}
-              fuelCap={"80L"}
-              transmission={"Auto"}
-              seat={"2"}
-              price={"80.50"}
-            />
-            <CardCar
-              title={"Rolls Royce "}
-              category={"Sedan"}
-              image={RollsRoyce}
-              fuelCap={"70L"}
-              transmission={"Manual"}
-              seat={"4"}
-              price={"100.00"}
-            />
-            <CardCar
-              title={"Rolls Royce "}
-              category={"Sedan"}
-              image={RollsRoyce}
-              fuelCap={"70L"}
-              transmission={"Manual"}
-              seat={"4"}
-              price={"100.00"}
-            />
+          <div className="overflow-x-auto w-full scrollbar-hide">
+            <div className="flex gap-10 mt-5 whitespace-nowrap">
+              <CardCar
+                title={"Koenisegg"}
+                category={"Sport"}
+                image={Koenisegg}
+                fuelCap={"90L"}
+                transmission={"Manual"}
+                seat={"2"}
+                price={"99.00"}
+              />
+              <CardCar
+                title={"Koenisegg"}
+                category={"Sport"}
+                image={Koenisegg}
+                fuelCap={"90L"}
+                transmission={"Manual"}
+                seat={"2"}
+                price={"99.00"}
+              />
+              <CardCar
+                title={"Koenisegg"}
+                category={"Sport"}
+                image={Koenisegg}
+                fuelCap={"90L"}
+                transmission={"Manual"}
+                seat={"2"}
+                price={"99.00"}
+              />
+              <CardCar
+                title={"Nissan GT-R"}
+                category={"Sport"}
+                image={NissanGTR}
+                fuelCap={"80L"}
+                transmission={"Auto"}
+                seat={"2"}
+                price={"80.50"}
+              />
+              <CardCar
+                title={"Rolls Royce "}
+                category={"Sedan"}
+                image={RollsRoyce}
+                fuelCap={"70L"}
+                transmission={"Manual"}
+                seat={"4"}
+                price={"100.00"}
+              />
+              <CardCar
+                title={"Rolls Royce "}
+                category={"Sedan"}
+                image={RollsRoyce}
+                fuelCap={"70L"}
+                transmission={"Manual"}
+                seat={"4"}
+                price={"100.00"}
+              />
+            </div>
           </div>
-          <div className="justify-between flex mt-9">
-            <div className="text-slate-600 font-semibold">
+          <div className="justify-between flex mt-9 px-4 md:px-6">
+            <div className="text-slate-600 font-semibold text-lg md:text-xl">
               Recommendation Car
             </div>
           </div>
-          <div className="gap-10 mt-5 flex-wrap grid grid-cols-4">
+
+          {/* Grid Responsive */}
+          <div className="gap-6 mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {recommendationCars.length > 0 ? (
               recommendationCars.map((car, index) => (
                 <CardCar
@@ -94,7 +116,9 @@ function Home() {
                 />
               ))
             ) : (
-              <p>Loading...</p>
+              <p className="text-center col-span-full text-gray-500">
+                Loading...
+              </p>
             )}
           </div>
         </div>

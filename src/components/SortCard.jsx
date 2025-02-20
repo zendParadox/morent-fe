@@ -18,22 +18,22 @@ function SortCard() {
   };
 
   return (
-    <div className="">
-      <div className="flex gap-11 group">
-        <div className="w-[582px] h-[132px] bg-white mt-8 rounded-lg">
-          <div className="my-6 mx-12">
+    <div className="p-4">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-11">
+        <div className="w-full md:w-[582px] h-auto md:h-[132px] bg-white mt-8 rounded-lg">
+          <div className="my-6 mx-4 md:mx-12">
             <div className="flex">
               <input type="radio" name="Pick-Up" id="" />
               <h2 className="ms-2">Pick - Up</h2>
             </div>
-            <div className="mt-4 justify-between flex">
-              <div className="">
-                <div className="font-semibold ">Location</div>
-                <div className="relative inline-flex">
+            <div className="mt-4 flex flex-col md:flex-row justify-between gap-4 md:gap-0">
+              <div className="w-full md:w-auto">
+                <div className="font-semibold">Location</div>
+                <div className="relative inline-flex w-full">
                   <button
                     type="button"
                     onClick={() => handleDropdownTogglePickUp("location")}
-                    className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
+                    className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none"
                     aria-haspopup="true"
                     aria-expanded={openDropdownPickUp === "location"}>
                     Select your city
@@ -56,7 +56,7 @@ function SortCard() {
 
                   {openDropdownPickUp === "location" && (
                     <div
-                      className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
+                      className="absolute z-10 mt-2 top-10 w-full md:w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
                       aria-orientation="vertical">
                       <a
@@ -83,13 +83,13 @@ function SortCard() {
                   )}
                 </div>
               </div>
-              <div className="">
+              <div className="w-full md:w-auto">
                 <div className="font-semibold">Date</div>
-                <div className="relative inline-flex">
+                <div className="relative inline-flex w-full">
                   <button
                     type="button"
                     onClick={() => handleDropdownTogglePickUp("date")}
-                    className="mt-2 inline-flex items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
+                    className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none"
                     aria-haspopup="true"
                     aria-expanded={openDropdownPickUp === "date"}>
                     Select your date
@@ -112,7 +112,7 @@ function SortCard() {
 
                   {openDropdownPickUp === "date" && (
                     <div
-                      className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
+                      className="absolute z-10 mt-2 top-10 w-full md:w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
                       aria-orientation="vertical">
                       <a
@@ -139,13 +139,13 @@ function SortCard() {
                   )}
                 </div>
               </div>
-              <div className="">
+              <div className="w-full md:w-auto">
                 <div className="font-semibold">Time</div>
-                <div className="relative inline-flex">
+                <div className="relative inline-flex w-full">
                   <button
                     type="button"
                     onClick={() => handleDropdownTogglePickUp("time")}
-                    className="mt-2 inline-flex items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
+                    className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none"
                     aria-haspopup="true"
                     aria-expanded={openDropdownPickUp === "time"}>
                     Select your time
@@ -168,7 +168,7 @@ function SortCard() {
 
                   {openDropdownPickUp === "time" && (
                     <div
-                      className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
+                      className="absolute z-10 mt-2 top-10 w-full md:w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
                       aria-orientation="vertical">
                       <a
@@ -198,27 +198,27 @@ function SortCard() {
             </div>
           </div>
         </div>
-        <div className="mt-5">
+        <div className="mt-5 flex justify-center md:justify-start">
           <div className="w-[60px] h-[60px] mt-10 rounded-lg bg-blue-500 flex items-center justify-center">
             <button type="button" className="">
               <img src={Swap} alt="" className="w-full h-full" />
             </button>
           </div>
         </div>
-        <div className="w-[582px] h-[132px] bg-white mt-8 rounded-lg">
-          <div className="my-6 mx-12">
+        <div className="w-full md:w-[582px] h-auto md:h-[132px] bg-white mt-8 rounded-lg">
+          <div className="my-6 mx-4 md:mx-12">
             <div className="flex">
               <input type="radio" name="Pick-Up" id="" />
               <h2 className="ms-2">Drop - Off</h2>
             </div>
-            <div className="mt-4 justify-between flex">
-              <div className="">
-                <div className="font-semibold ">Location</div>
-                <div className="relative inline-flex">
+            <div className="mt-4 flex flex-col md:flex-row justify-between gap-4 md:gap-0">
+              <div className="w-full md:w-auto">
+                <div className="font-semibold">Location</div>
+                <div className="relative inline-flex w-full">
                   <button
                     type="button"
                     onClick={() => handleDropdownToggleDropOff("location")}
-                    className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
+                    className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none"
                     aria-haspopup="true"
                     aria-expanded={openDropdownDropdown === "location"}>
                     Select your city
@@ -241,7 +241,7 @@ function SortCard() {
 
                   {openDropdownDropdown === "location" && (
                     <div
-                      className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
+                      className="absolute z-10 mt-2 top-10 w-full md:w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
                       aria-orientation="vertical">
                       <a
@@ -268,13 +268,13 @@ function SortCard() {
                   )}
                 </div>
               </div>
-              <div className="">
+              <div className="w-full md:w-auto">
                 <div className="font-semibold">Date</div>
-                <div className="relative inline-flex">
+                <div className="relative inline-flex w-full">
                   <button
                     type="button"
                     onClick={() => handleDropdownToggleDropOff("date")}
-                    className="mt-2 inline-flex items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
+                    className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none"
                     aria-haspopup="true"
                     aria-expanded={openDropdownDropdown === "date"}>
                     Select your date
@@ -297,7 +297,7 @@ function SortCard() {
 
                   {openDropdownDropdown === "date" && (
                     <div
-                      className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
+                      className="absolute z-10 mt-2 top-10 w-full md:w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
                       aria-orientation="vertical">
                       <a
@@ -324,13 +324,13 @@ function SortCard() {
                   )}
                 </div>
               </div>
-              <div className="">
+              <div className="w-full md:w-auto">
                 <div className="font-semibold">Time</div>
-                <div className="relative inline-flex">
+                <div className="relative inline-flex w-full">
                   <button
                     type="button"
                     onClick={() => handleDropdownToggleDropOff("time")}
-                    className="mt-2 inline-flex items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none "
+                    className="mt-2 inline-flex w-full items-center gap-x-2 text-sm text-slate-500 hover:bg-gray-50 focus:outline-none"
                     aria-haspopup="true"
                     aria-expanded={openDropdownDropdown === "time"}>
                     Select your time
@@ -353,7 +353,7 @@ function SortCard() {
 
                   {openDropdownDropdown === "time" && (
                     <div
-                      className="absolute z-10 mt-2 top-10 w-56 bg-white shadow-md rounded-lg p-2"
+                      className="absolute z-10 mt-2 top-10 w-full md:w-56 bg-white shadow-md rounded-lg p-2"
                       role="menu"
                       aria-orientation="vertical">
                       <a
