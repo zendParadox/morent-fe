@@ -17,7 +17,7 @@ function CardCar({
 }) {
   return (
     <>
-      <div className="group w-[304px] h-[388px] bg-white mt-5 px-5 py-5 rounded-lg shadow-lg">
+      <div className="group w-64 bg-white px-5 py-5 rounded-lg shadow-sm">
         <div className="w-full h-full ">
           <div className="flex justify-between items-center">
             <div className="">
@@ -38,24 +38,24 @@ function CardCar({
             />
           </div>
           <div className="mt-16">
-            <div className="flex justify-around">
-              <div className="flex gap-[6px] text-slate-400">
-                <img src={GasStation} alt="" className="w-6 h-6" />
+            <div className="flex justify-around ">
+              <div className="flex gap-[6px] text-slate-400 items-center">
+                <img src={GasStation} alt="" className="w-4 h-4" />
                 <div className="">{fuelCap}</div>
               </div>
-              <div className="flex gap-[6px] text-slate-400">
-                <img src={Car} alt="" className="w-6 h-6" />
+              <div className="flex gap-[6px] text-slate-400 items-center">
+                <img src={Car} alt="" className="w-4 h-4" />
                 <div className="">{transmission}</div>
               </div>
-              <div className="flex gap-[6px] text-slate-400">
-                <img src={User} alt="" className="w-6 h-6" />
+              <div className="flex gap-[6px] text-slate-400 items-center">
+                <img src={User} alt="" className="w-4 h-4" />
                 <div className="">{seat}</div>
               </div>
             </div>
           </div>
           <div className="flex mt-6 items-center justify-between">
             <div className="font-bold">
-              ${price}/ <span className="text-sm text-slate-400">day</span>
+              {price}/ <span className="text-sm text-slate-400">day</span>
             </div>
             <Button text="Rent Now" bgColor="#3563E9" onClick="#" />
           </div>

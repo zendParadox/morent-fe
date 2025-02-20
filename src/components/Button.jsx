@@ -2,7 +2,7 @@
 const Button = ({ text, bgColor, onClick }) => {
   return (
     <button
-      className={`px-6 py-3 rounded text-white font-semibold focus:outline-none`}
+      className={`px-2 py-2 rounded text-sm text-white font-semibold focus:outline-none`}
       style={{ backgroundColor: bgColor }}
       onClick={onClick}>
       {text}
