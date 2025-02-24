@@ -101,22 +101,22 @@ function Home() {
           </div>
 
           {/* Grid Responsive */}
-          <div className="gap-6 mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="gap-6 mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center">
             {recommendationCars.length > 0 ? (
               recommendationCars.map((car, index) => (
                 <CardCar
                   key={index}
                   title={`${car.brand} ${car.model}`}
-                  category="Sedan"
+                  category={car.type_car}
                   image={Koenisegg} // Pakai gambar default jika kosong
-                  fuelCap={"70L"}
-                  transmission={"Manual"}
-                  seat={"4"}
+                  fuelCap={car.gasoline_cap}
+                  transmission={car.steering}
+                  seat={car.capacity}
                   price={`Rp ${car.price_per_day.toLocaleString("id-ID")}`}
                 />
               ))
             ) : (
-              <p className="text-center col-span-full text-gray-500">
+              <p className="text-center col-span-full text-gray-500 text-lg sm:text-xl">
                 Loading...
               </p>
             )}
