@@ -4,6 +4,7 @@ import Ads from "../components/Ads";
 import CardCar from "../components/CardCar";
 import SortCard from "../components/SortCard";
 import Button from "../components/Button";
+import Navbar from "../components/Navbar";
 
 import Koenisegg from "../assets/images/koenisegg.png";
 import NissanGTR from "../assets/images/nissan-gtr.png";
@@ -26,6 +27,7 @@ function Home() {
 
   return (
     <>
+      <Navbar />
       <div className="bg-slate-100">
         <div className="mx-4 md:mx-8 lg:mx-16 ">
           <Ads />
@@ -112,7 +114,7 @@ function Home() {
                   fuelCap={car.gasoline_cap}
                   transmission={car.steering}
                   seat={car.capacity}
-                  price={`Rp ${car.price_per_day.toLocaleString("id-ID")}`}
+                  price={`Rp.${car.price_per_day.toLocaleString("id-ID")}`}
                 />
               ))
             ) : (
