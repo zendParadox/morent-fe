@@ -17,8 +17,8 @@ function Sidebar() {
   };
 
   return (
-    <div className="float-start ">
-      <div className="w-64 h-screen bg-white p-5 rounded-br-lg shadow-sm text-sm">
+    <div className="float-start mb-4">
+      <div className="w-64 h-full  bg-white p-5 rounded-br-lg shadow-sm text-sm">
         <h2 className="text-sm font-semibold text-slate-400 mb-2">TYPE</h2>
         <div className="space-y-3">
           <label className="flex items-center space-x-2">

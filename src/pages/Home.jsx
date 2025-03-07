@@ -30,7 +30,9 @@ function Home() {
       <Navbar />
       <div className="bg-slate-100">
         <div className="mx-4 md:mx-8 lg:mx-16 ">
-          <Ads />
+          <div className="mb-8">
+            <Ads />
+          </div>
           <SortCard />
           <div className="justify-between flex mt-9">
             <div className="text-slate-600 font-semibold">Popular Car</div>

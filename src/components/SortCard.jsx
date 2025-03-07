@@ -42,9 +42,9 @@ function SortCard() {
   ]);
 
   return (
-    <div className="container mx-auto max-w-full">
+    <div className="container mx-auto max-w-full ">
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 relative">
-        <div className="w-full md:w-[582px] h-auto md:h-[145px] bg-white mt-8 rounded-lg">
+        <div className="w-full md:w-[582px] h-auto md:h-[145px] bg-white  rounded-lg">
           <div className="my-6 mx-4 md:mx-12">
             <div className="flex">
               <input type="radio" name="Pick-Up" id="" />
@@ -158,14 +158,14 @@ function SortCard() {
             </div>
           </div>
         </div>
-        <div className="mt-5 flex justify-center md:justify-start z-10  absolute left-1/2 top-14 -translate-x-1/2 -translate-y-1/2">
+        <div className="mt-5 flex justify-center md:justify-start z-10  absolute left-1/2 top-8 -translate-x-1/2 -translate-y-1/2">
           <div className="w-[60px] h-[60px] mt-10 rounded-lg bg-blue-500 flex items-center justify-center">
             <button type="button" className="">
               <img src={Swap} alt="" className="w-full h-full" />
             </button>
           </div>
         </div>
-        <div className="w-full md:w-[582px] h-auto md:h-[132px] bg-white mt-8 rounded-lg">
+        <div className="w-full md:w-[582px] h-auto md:h-[145px] bg-white rounded-lg">
           <div className="my-6 mx-4 md:mx-12">
             <div className="flex">
               <input type="radio" name="Pick-Up" id="" />
